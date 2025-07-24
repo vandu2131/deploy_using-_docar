@@ -1,0 +1,23 @@
+
+body {
+  background-color: #f4f6f9;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  color: #333;
+}
+
+footer {
+  background-color: #222;
+  color: #ddd;
+  padding: 1rem 0;
+  text-align: center;
+}

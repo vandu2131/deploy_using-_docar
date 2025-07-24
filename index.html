@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="mb-4 text-center">Student Registration Form</h2>
+    <form action="/submit" method="POST">
+      <div class="row mb-3">
+        <div class="col-md-4"><input name="firstName" type="text" class="form-control" placeholder="First Name" required /></div>
+        <div class="col-md-4"><input name="middleName" type="text" class="form-control" placeholder="Middle Name" /></div>
+        <div class="col-md-4"><input name="lastName" type="text" class="form-control" placeholder="Last Name" required /></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6"><input name="dob" type="date" class="form-control" required /></div>
+        <div class="col-md-6"><input name="studentId" type="text" class="form-control" placeholder="Student ID" required /></div>
+      </div>
+      <div class="mb-3"><input name="street" type="text" class="form-control" placeholder="Street Address" /></div>
+      <div class="row mb-3">
+        <div class="col-md-6"><input name="city" type="text" class="form-control" placeholder="City" /></div>
+        <div class="col-md-6"><input name="state" type="text" class="form-control" placeholder="State / Province" /></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6"><input name="country" type="text" class="form-control" placeholder="Country" /></div>
+        <div class="col-md-6"><input name="zip" type="text" class="form-control" placeholder="ZIP Code" /></div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-md-6"><input name="email" type="email" class="form-control" placeholder="E-mail" /></div>
+        <div class="col-md-6"><input name="phone" type="text" class="form-control" placeholder="Phone" /></div>
+      </div>
+
+      <h5>Courses</h5>
+      <div class="mb-3">
+        <button type="button" class="btn btn-secondary btn-sm" onclick="addRow()">+ Add new record</button>
+      </div>
+      <div class="table-responsive mb-3">
+        <table class="table table-bordered" id="courseTable">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Level</th>
+              <th>Language</th>
+              <th>Start Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="text" class="form-control" name="course[]" /></td>
+              <td><input type="text" class="form-control" name="level[]" /></td>
+              <td><input type="text" class="form-control" name="language[]" /></td>
+              <td><input type="date" class="form-control" name="startDate[]" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mb-3">
+        <textarea name="comments" class="form-control" rows="3" placeholder="Comments"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
